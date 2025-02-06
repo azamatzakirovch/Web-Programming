@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Calculator</title>
+    <script defer src="sample.js"></script>
+    <style>
+        ._menu_panel {
+            width: 1900px;
+            height: 65px;
+            background-color: #D9D9D9;
+            border-radius: 10px;
+            position: absolute;
+            top: 25px;
+            left: 50px;
+        }
+        .rectangle_for_result_html {
+            width: 890px;
+            height: 750px;
+            background-color: #09061f;
+            position: absolute;
+            border-radius: 10px;
+            top: 200px;
+            left: 1030px;
+        }
 
+        .question_panel {
+            width: 1900px;
+            height: 1050px;
+            border-radius: 10px;
+            background-color: #D9D9D9;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        }
+        .profile-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 9px;
+            right: 10px;
+        }
+        .say_hello {
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            top: 25px;
+            right: 70px;
+        }
+        .question_is_here {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            top: 25px;
+            left: 70px;
+        }
+        .answer_is_here {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            top: 25px;
+            left: 900px;
+        }
+        .task_manager {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            top: 70px;
+            left: 70px;
+        }
+        .aspects {
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            top: 120px;
+            left: 70px;
+            white-space: pre-line;
+        }
+        .calculator {
+            width: 300px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 100px;
+            left: 300px;
+        }
+        .calculator input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .calculator button {
+            width: 45%;
+            padding: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin: 5px 2%;
+            border-radius: 5px;
+        }
+        .calculator button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .divider {
+            width: 2px;
+            height: 800px;
+            background-color: black;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .to_html, .to_js {
+            position: absolute;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 13px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .to_html {
+            top: 220px;
+            right: 800px;
+        }
+
+        .to_js {
+            top: 220px;
+            right: 660px;
+        }
+
+        .to_html:hover, .to_js:hover {
+            transform: scale(1.1);
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>
