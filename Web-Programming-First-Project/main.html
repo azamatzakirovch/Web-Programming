@@ -12,7 +12,6 @@
             padding: 10px;
             background: #f0f0f0;
         }
-
         .main_controller {
             width: 1990px;
             height: 70px;
@@ -22,7 +21,6 @@
             top: 10px;
             left: 10px;
         }
-
         .door_to_come_inside {
             width: 660px;
             height: 800px;
@@ -62,22 +60,19 @@
             transform: translate(-50%) scale(1.1);
             background-color: #45a049;
         }
-
         @keyframes pulse {
             0% { box-shadow: 0 0 15px 5px #9a9696; }
             50% { box-shadow: 0 0 20px 10px #9a9696; }
             100% { box-shadow: 0 0 15px 5px #9a9696; }
         }
-
         .door_to_come_inside {
             animation: pulse 2s infinite ease-in-out;
         }
-
     </style>
 </head>
 <body>
 <div class="door_to_come_inside">
-    <img src="logo.jpg" alt="Profile Icon" class="logo-of-company">
+    <img src="photos/logo.jpg" alt="Profile Icon" class="logo-of-company">
     <label style="position: absolute; top: 370px; left: 50%; transform: translate(-50%); font-size: 20px; font-family: 'Arial', sans-serif;">Welcome to Vertex Academy</label>
     <div class="move_forward" onclick="toggleModal()">
         <label style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 20px; font-family: 'Arial', sans-serif; color: white">Move Forward</label>
