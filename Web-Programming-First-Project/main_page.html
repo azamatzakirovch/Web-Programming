@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Vertex Academy</title>
+    <script defer src="js_part_of_main_page.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+        .controller_bar {
+            width: 1990px;
+            height: 70px;
+            background-color: #D9D9D9;
+            border-radius: 15px;
+            position: absolute;
+            top: 10px;
+            left: 5px;
+        }
+        .account_settings {
+            position: absolute;
+            top: 10px;
+            right: 206px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+        .account_settings:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        .img_of_profile {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        #mainContent {
+            transition: filter 0.3s;
+        }
+        .backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .popup {
+            width: 660px;
+            height: 800px;
+            border-radius: 40px;
+            position: absolute;
+            border: 4px solid #9a9696;
+            box-shadow: 0 0 20px 10px #9a9696;
+            overflow: hidden;
+            background: #f0f0f0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        @keyframes breathe {
+            0% { box-shadow: 0 0 15px 5px #9a9696; }
+            50% { box-shadow: 0 0 20px 10px #9a9696; }
+            100% { box-shadow: 0 0 15px 5px #9a9696; }
+        }
+        .popup {
+            animation: breathe 2s infinite ease-in-out;
+        }
+        .close-btn {
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .blur {
+            filter: blur(8px);
+        }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<div id="mainContent"></div>
+<div id="backdrop" style="display:none;">
+    <div class="popup">
+        <button id="closePopup">
+            <img class="close-btn" src="photos/close.png" alt="Closer Button">
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
