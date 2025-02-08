@@ -7,6 +7,7 @@ const logo_of_company = document.createElement("img");
 logo_of_company.src = "photos/logo.jpg";
 logo_of_company.alt = "Company Logo";
 logo_of_company.className = "logo-of-company";
+
 const welcome = document.createElement("div");
 welcome.textContent = "Welcome To Vertex Academy";
 welcome.style.display = "block";
