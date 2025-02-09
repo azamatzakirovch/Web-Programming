@@ -79,10 +79,12 @@
             font-weight: bold;
             border: none;
             cursor: pointer;
+            transition: transform 0.3s;
 
         }
         .close-btn:hover {
             cursor: pointer;
+            transform: scale(1.1);
         }
 
         .edit_profile {
@@ -94,7 +96,14 @@
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
+            transition: transform 0.3s;
         }
+        .edit_profile:hover {
+            transform: scale(1.1);
+        }
+
+
+
 
         .edit_profile_photo{
             border-radius: 50%;
@@ -106,6 +115,7 @@
             transform: translate(-50%);
             overflow: hidden;
             border: none;
+            cursor: pointer;
         }
         @keyframes breathe_of_profile {
             0% { box-shadow: 0 0 15px 5px #9a9696; }
@@ -115,12 +125,14 @@
         .edit_profile_photo {
             animation: breathe_of_profile 2s infinite ease-in-out;
         }
+        .edit_profile_photo:hover {
+            cursor: pointer;
+        }
 
         .rectangle_for_mini_window {
             width: 500px;
             height: 180px;
             border-radius: 17px;
-            border: 2px solid #9a9696;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -130,21 +142,160 @@
             top: 370px;
             left: 50%;
             transform: translateX(-50%);
+            background: #D9D9D9;
         }
 
-        .divider {
-            height: 1px;
-            background-color: #000000;
+        .really_edit_profile_name_and_surname {
+            width: 500px;
+            height: 120px;
+            border-radius: 17px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D9D9D9;
+        }
+
+        .really_profile_photo_changer{
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .really_profile_photo_changer:hover {
+            transform: scale(1.1);
+        }
+
+        .img_of_really_profile_photo_changer {
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+        }
+
+        .edit_name{
+            font-size: 20px;
+            width: 320px;
+            height: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 45px;
+            left: 154px;
+            transition: all 0.25s ease-in-out;
+            color: #000000;
+            background: #D9D9D9;
+        }
+
+        .edit_name:focus {
+            outline: none;
+        }
+
+        .divider_bay {
+            height: 2px;
+            background-color: #333;
+            width: 65%;
+            position: absolute;
+            top: 84px;
+            right: 25px;
+        }
+
+        .rectangle_for_edit_birthday {
+            width: 500px;
+            height: 50px;
+            border-radius: 17px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 320px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D9D9D9;
+        }
+
+        .edit_birthday_button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            color: #0f26e1;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .edit_birthday_button:hover {
+            transform: scale(1.1);
+        }
+
+        .edit_username_button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 20px;
+            color: #0f26e1;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .edit_username_button:hover {
+            transform: scale(1.1);
+        }
+
+        .rectangle_of_phone_and_username_changer {
+            width: 500px;
+            height: 100px;
+            border-radius: 17px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 460px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D9D9D9;
+        }
+
+        .edit_phone_and_username{
+            font-size: 20px;
+            width: 320px;
+            height: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 500px;
+            left: 154px;
+            transition: all 0.25s ease-in-out;
+            color: #000000;
+            background: #D9D9D9;
+        }
+
+        .edit_phone_and_username:focus {
+            outline: none;
+        }
+
+        .divided_by_phone_and_username {
+            height: 2px;
+            background-color: #333;
             width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 30px;
         }
-
-        .divider2 {
-            height: 1px;
-            background-color: #000000;
-            width: 90%;
-        }
-
-
 
     </style>
 </head>

@@ -97,3 +97,7 @@ move_forward.addEventListener('click', function() {
     create_new_account.style.display = "block";
     next_button_of_login_password.style.display = "block";
 });
+
+next_button_of_login_password.addEventListener("click", function() {
+    window.location.href = 'main_page.html'
+})
