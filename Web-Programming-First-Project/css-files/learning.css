@@ -1,0 +1,177 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.button_for_AI{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 180px;
+    left: 400px;
+    cursor: pointer;
+}
+.button_for_AI:hover{
+    transform: scale(1.1);
+}
+.img_of_button_for_AI{
+    width: 350px;
+    height: 350px;
+}
+
+.button_for_Data_Science{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 180px;
+    left: 810px;
+    cursor: pointer;
+
+}
+.button_for_Data_Science:hover{
+    transform: scale(1.1);
+}
+.img_of_button_for_Data_Science{
+    width: 350px;
+    height: 350px;
+}
+
+.button_for_ML{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 180px;
+    left: 1220px;
+    cursor: pointer;
+
+}
+.button_for_ML:hover{
+    transform: scale(1.1);
+}
+.img_of_button_for_ML{
+    width: 350px;
+    height: 350px;
+}
+
+.button_for_DL{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 180px;
+    left: 1630px;
+    cursor: pointer;
+
+}
+.button_for_DL:hover{
+    transform: scale(1.1);
+}
+.img_of_button_for_DL{
+    width: 350px;
+    height: 350px;
+}
+/*\n*/
+.button_for_Neural_networks{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 590px;
+    left: 400px;
+    cursor: pointer;
+
+}
+.button_for_Neural_networks:hover{
+    transform: scale(1.1);
+}
+.img_for_button_for_Neural_networks{
+    width: 350px;
+    height: 350px;
+}
+
+.button_for_Linear_Algebra{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 590px;
+    left: 810px;
+    cursor: pointer;
+
+}
+.button_for_Linear_Algebra:hover{
+    transform: scale(1.1);
+}
+.img_of_button_for_Linear_Algebra{
+    width: 350px;
+    height: 350px;
+}
+
+.button_for_Probability_and_Statistics{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 590px;
+    left: 1220px;
+    cursor: pointer;
+
+}
+.button_for_Probability_and_Statistics:hover{
+    transform: scale(1.1);
+}
+.img_of_button_for_Probability_and_Statistics{
+    width: 350px;
+    height: 350px;
+}
+
+.button_for_Calculus{
+    width: 350px;
+    height: 350px;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 590px;
+    left: 1630px;
+    cursor: pointer;
+
+}
+.button_for_Calculus:hover{
+    transform: scale(1.1);
+}
+.img_of_button_for_Calculus{
+    width: 350px;
+    height: 350px;
+}
+
+.button_for_AI {
+    left: 220px; /* 400 - 180 */
+}
+.button_for_Data_Science {
+    left: 630px; /* 810 - 180 */
+}
+.button_for_ML {
+    left: 1040px; /* 1220 - 180 */
+}
+.button_for_DL {
+    left: 1450px; /* 1630 - 180 */
+}
+.button_for_Neural_networks {
+    left: 220px; /* 400 - 180 */
+}
+.button_for_Linear_Algebra {
+    left: 630px; /* 810 - 180 */
+}
+.button_for_Probability_and_Statistics {
+    left: 1040px; /* 1220 - 180 */
+}
+.button_for_Calculus {
+    left: 1450px; /* 1630 - 180 */
+}

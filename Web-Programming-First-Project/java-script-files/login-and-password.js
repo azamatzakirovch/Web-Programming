@@ -1,5 +1,5 @@
 const root = document.getElementById("root");
-// main page
+
 const door_to_come_inside_ = document.createElement("div");
 door_to_come_inside_.className = "door_to_come_inside";
 
