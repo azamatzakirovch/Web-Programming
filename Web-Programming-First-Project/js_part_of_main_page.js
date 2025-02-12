@@ -303,7 +303,6 @@ show_phone_number.style.top = "15px";
 show_phone_number.style.color = "#0f26e1";
 show_phone_number.style.display = "none";
 
-
 const show_phone_number_ = document.createElement("div");
 show_phone_number_.textContent = users_phone;
 show_phone_number_.style.fontSize = "17px";
@@ -349,6 +348,95 @@ edit_button_for_username.textContent = "edit";
 edit_button_for_username.textContent.fontcolor("##0f26e1")
 edit_button_for_username.style.display = "none";
 
+const sidebar = document.createElement("div");
+sidebar.className = "sidebar";
+
+const sidebar_button = document.createElement("div");
+sidebar_button.className = "menu-btn";
+
+const img_of_sidebar_button = document.createElement("img");
+img_of_sidebar_button.className = "image_of_sidebar";
+img_of_sidebar_button.src = 'photos/sidebar_button.png';
+img_of_sidebar_button.alt = "Sidebar Photo";
+
+const close_sidebar_button = document.createElement("div");
+close_sidebar_button.className = "close_sidebar";
+
+const image_of_close_sidebar = document.createElement("img");
+image_of_close_sidebar.className = "image_of_sidebar";
+image_of_close_sidebar.src = 'photos/close.png';
+image_of_close_sidebar.alt = "Sidebar Photo";
+close_sidebar_button.appendChild(image_of_close_sidebar);
+
+sidebar_button.appendChild(img_of_sidebar_button);
+controller_bar.appendChild(sidebar_button);
+controller_bar.appendChild(sidebar);
+
+const learning_button = document.createElement("div");
+learning_button.className = "learning_button";
+const txt_learning_button = document.createElement("div");
+txt_learning_button.textContent = 'Learning';
+txt_learning_button.style.fontSize = "30px";
+txt_learning_button.style.lineHeight = "14px";
+txt_learning_button.style.fontFamily = "Arial";
+txt_learning_button.style.position = "absolute";
+txt_learning_button.style.left = "80px";
+txt_learning_button.style.top = "50%";
+txt_learning_button.style.transform = "translateY(-50%)";
+txt_learning_button.style.color = "#000000";
+learning_button.appendChild(txt_learning_button);
+
+const quiz_button = document.createElement("div");
+quiz_button.className = "quiz_button";
+const txt_quiz_button = document.createElement("div");
+txt_quiz_button.textContent = 'Quiz';
+txt_quiz_button.style.fontSize = "30px";
+txt_quiz_button.style.lineHeight = "14px";
+txt_quiz_button.style.fontFamily = "Arial";
+txt_quiz_button.style.position = "absolute";
+txt_quiz_button.style.left = "80px";
+txt_quiz_button.style.top = "50%";
+txt_quiz_button.style.transform = "translateY(-50%)";
+txt_quiz_button.style.color = "#000000";
+quiz_button.appendChild(txt_quiz_button);
+
+const home_work_button = document.createElement("div");
+home_work_button.className = "home_work_button";
+const txt_home_work_button = document.createElement("div");
+txt_home_work_button.textContent = 'Get & Upload Home Work';
+txt_home_work_button.style.fontSize = "30px";
+txt_home_work_button.style.lineHeight = "14px";
+txt_home_work_button.style.fontFamily = "Arial";
+txt_home_work_button.style.position = "absolute";
+txt_home_work_button.style.left = "80px";
+txt_home_work_button.style.top = "50%";
+txt_home_work_button.style.transform = "translateY(-50%)";
+txt_home_work_button.style.color = "#000000";
+home_work_button.appendChild(txt_home_work_button);
+
+
+const grader_button = document.createElement("div");
+grader_button.className = "grader_button";
+const txt_grader_button = document.createElement("div");
+txt_grader_button.textContent = 'Grades';
+txt_grader_button.style.fontSize = "30px";
+txt_grader_button.style.lineHeight = "14px";
+txt_grader_button.style.fontFamily = "Arial";
+txt_grader_button.style.position = "absolute";
+txt_grader_button.style.left = "80px";
+txt_grader_button.style.top = "50%";
+txt_grader_button.style.transform = "translateY(-50%)";
+txt_grader_button.style.color = "#000000";
+grader_button.appendChild(txt_grader_button);
+
+sidebar.appendChild(close_sidebar_button);
+sidebar.appendChild(quiz_button);
+sidebar.appendChild(home_work_button);
+sidebar.appendChild(grader_button);
+sidebar.appendChild(learning_button);
+sidebar.appendChild(close_sidebar_button);
+sidebar.appendChild(learning_button);
+
 rectangle_for_edit_birthday.appendChild(edit_birthday_button);
 rectangle_for_edit_birthday.appendChild(show_birthday_in_editor_part_);
 rectangle_for_edit_birthday.appendChild(show_birthday_in_editor_part);
@@ -365,6 +453,7 @@ really_edit_profile_name_and_surname.appendChild(edit_name);
 really_edit_profile_name_and_surname.appendChild(divider_bay);
 really_profile_photo_changer.appendChild(img_of_really_profile_photo_changer)
 really_edit_profile_name_and_surname.appendChild(really_profile_photo_changer);
+
 
 mini_window_to_see_account.appendChild(rectangle_of_phone_and_username_changer);
 mini_window_to_see_account.appendChild(helper_to_change_phone_number_and_username)
@@ -405,6 +494,18 @@ save_edited_profile.addEventListener('click', function() {
     hider_of_first_page('success')
     hider_of_2nd_window('not_success')
 });
+
+sidebar_button.addEventListener('click', function() {
+    sidebar.classList.toggle("active");
+});
+
+close_sidebar_button.addEventListener('click', function() {
+    sidebar.classList.toggle("active");
+
+})
+
+
+
 
 
 
@@ -465,4 +566,27 @@ function createDivider(x,y, height = "1px") {
     divider.style.backgroundColor = "black";
     document.body.appendChild(divider);
     return divider;
+}
+
+function return_the_number_of_days_of_month_and_determines_the_leap_year(year, month){
+    const months = [
+        { name: "January", days: 31 },
+        { name: "February", days: 28 },
+        { name: "March", days: 31 },
+        { name: "April", days: 30 },
+        { name: "May", days: 31 },
+        { name: "June", days: 30 },
+        { name: "July", days: 31 },
+        { name: "August", days: 31 },
+        { name: "September", days: 30 },
+        { name: "October", days: 31 },
+        { name: "November", days: 30 },
+        { name: "December", days: 31 }
+    ];
+    let flag = false
+
+    if(((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0))&& month === 'February'){
+        return months[month] + 1
+    }
+    return months[month];
 }
