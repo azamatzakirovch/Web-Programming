@@ -4,7 +4,7 @@ const door_to_come_inside_ = document.createElement("div");
 door_to_come_inside_.className = "door_to_come_inside";
 
 const logo_of_company = document.createElement("img");
-logo_of_company.src = "photos/logo.jpg";
+logo_of_company.src = "../photos/logo.jpg";
 logo_of_company.alt = "Company Logo";
 logo_of_company.className = "logo-of-company";
 

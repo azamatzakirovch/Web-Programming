@@ -4,7 +4,7 @@ const users_name = 'Azamat Zakirovch'
 const users_login = '@azamatzakirovch'
 const users_phone = '+998 98 123 21 05'
 const users_birthday = 'Oct 21, 2005 (19 years old)'
-const the_location_of_users_profile_photo = 'photos/azamatzakirovch.jpg'
+const the_location_of_users_profile_photo = '../photos/azamatzakirovch.jpg'
 
 const controller_bar = document.createElement('div');
 controller_bar.className = "controller_bar";
@@ -51,7 +51,7 @@ close_button_of_mini_window_to_see_account.className = "close-btn";
 close_button_of_mini_window_to_see_account.style.display = "block";
 
 const image_of_close_button = document.createElement("img");
-image_of_close_button.src = 'photos/close.png';
+image_of_close_button.src = '../photos/close.png';
 image_of_close_button.style.width = '30px'
 image_of_close_button.style.high = '30px'
 /*from here it started*/
@@ -356,7 +356,7 @@ sidebar_button.className = "menu-btn";
 
 const img_of_sidebar_button = document.createElement("img");
 img_of_sidebar_button.className = "image_of_sidebar";
-img_of_sidebar_button.src = 'photos/sidebar_button.png';
+img_of_sidebar_button.src = '../photos/sidebar_button.png';
 img_of_sidebar_button.alt = "Sidebar Photo";
 
 const close_sidebar_button = document.createElement("div");
@@ -364,7 +364,7 @@ close_sidebar_button.className = "close_sidebar";
 
 const image_of_close_sidebar = document.createElement("img");
 image_of_close_sidebar.className = "image_of_sidebar";
-image_of_close_sidebar.src = 'photos/close.png';
+image_of_close_sidebar.src = '../photos/close.png';
 image_of_close_sidebar.alt = "Sidebar Photo";
 close_sidebar_button.appendChild(image_of_close_sidebar);
 
@@ -504,11 +504,6 @@ close_sidebar_button.addEventListener('click', function() {
 
 })
 
-
-
-
-
-
 function hider_of_first_page(f){
     let show_or_hide = 'none'
     if(f === "success"){
@@ -555,6 +550,7 @@ function hider_of_2nd_window(f){
     edit_button_for_username.style.display = show_or_hide;
     edit_button_for_phone_number.style.display = show_or_hide;
 }
+
 function createDivider(x,y, height = "1px") {
     const divider = document.createElement("div");
     divider.className = "divider";
@@ -584,7 +580,6 @@ function return_the_number_of_days_of_month_and_determines_the_leap_year(year, m
         { name: "December", days: 31 }
     ];
     let flag = false
-
     if(((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0))&& month === 'February'){
         return months[month] + 1
     }
