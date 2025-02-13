@@ -1,12 +1,11 @@
 const root = document.getElementById("root");
 
-
 const ai_course = document.createElement('img');
-ai_course.className = "ai_course";
-ai_course.src = "../../photos/ai.png";
+ai_course.className = "data-science-course";
+ai_course.src = "../../photos/data_science.png";
 
 const name_of_the_course = document.createElement("div");
-name_of_the_course.textContent = "Introduction To Artificial Intelligence";
+name_of_the_course.textContent = "Introduction To Data Science";
 name_of_the_course.style.fontSize = "40px";
 name_of_the_course.style.lineHeight = "14px";
 name_of_the_course.style.textAlign = "center";
@@ -16,11 +15,10 @@ name_of_the_course.style.left = "480px";
 name_of_the_course.style.top = "220px";
 name_of_the_course.style.fontWeight = "bold";
 
-let text_of_course_information = "This course provides a comprehensive introduction to the field of artificial intelligence.\n" +
-    "It explores the fundamental concepts, techniques, and applications of AI, including machine learning, \n" +
-    "deep learning, natural language processing, robotics, and computer vision. Designed for beginners, \n" +
-    "the course aims to equip students with a solid understanding of AI principles and the skills to apply AI\n" +
-    "technologies in real-world scenarios."
+let text_of_course_information = "This course introduces the interdisciplinary field of data science, which combines statistical analysis, \n" +
+    "data inference, and algorithm development to solve complex problems and predict outcomes from data. \n" +
+    "The course is designed to provide students with the knowledge and practical skills needed to analyze,\n" +
+    "visualize, and make informed decisions based on data across various contexts and industries."
 
 const course_information = document.createElement("div");
 course_information.textContent = text_of_course_information;
