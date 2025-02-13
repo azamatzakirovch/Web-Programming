@@ -141,37 +141,38 @@ body {
     top: 590px;
     left: 1630px;
     cursor: pointer;
-
 }
+
 .button_for_Calculus:hover{
     transform: scale(1.1);
 }
+
 .img_of_button_for_Calculus{
     width: 350px;
     height: 350px;
 }
 
 .button_for_AI {
-    left: 220px; /* 400 - 180 */
+    left: 220px;
 }
 .button_for_Data_Science {
-    left: 630px; /* 810 - 180 */
+    left: 630px;
 }
 .button_for_ML {
-    left: 1040px; /* 1220 - 180 */
+    left: 1040px;
 }
 .button_for_DL {
-    left: 1450px; /* 1630 - 180 */
+    left: 1450px;
 }
 .button_for_Neural_networks {
-    left: 220px; /* 400 - 180 */
+    left: 220px;
 }
 .button_for_Linear_Algebra {
-    left: 630px; /* 810 - 180 */
+    left: 630px;
 }
 .button_for_Probability_and_Statistics {
-    left: 1040px; /* 1220 - 180 */
+    left: 1040px;
 }
 .button_for_Calculus {
-    left: 1450px; /* 1630 - 180 */
+    left: 1450px;
 }
