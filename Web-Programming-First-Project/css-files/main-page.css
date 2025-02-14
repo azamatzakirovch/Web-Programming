@@ -415,7 +415,7 @@ body {
 
 .grader_button {
     position: absolute;
-    top: 480px; /* 380px + 80px + 20px spacing */
+    top: 480px;
     left: -40px;
     font-size: 20px;
     cursor: pointer;
@@ -428,4 +428,10 @@ body {
 
 .grader_button:hover {
     transform: scale(1.1);
+}
+
+.open_all_courses {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }

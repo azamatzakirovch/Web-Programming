@@ -97,7 +97,7 @@ DL.style.color = "#000000";
 root.appendChild(DL);
 
 
-// 260 700 1090 1530
+
 
 
 
@@ -181,7 +181,7 @@ button_for_Calculus.className = "button_for_Calculus";
 
 const img_of_button_for_Calculus = document.createElement("img");
 img_of_button_for_Calculus.className = "img_of_button_for_Calculus";
-img_of_button_for_Calculus.src = "../photos/calculus.png"; // Fixed incorrect src
+img_of_button_for_Calculus.src = "../photos/calculus.png";
 img_of_button_for_Calculus.alt = "Calculus";
 
 button_for_Calculus.appendChild(img_of_button_for_Calculus);
@@ -196,3 +196,36 @@ C.style.left = "1560px";
 C.style.top = "950px";
 C.style.color = "#000000";
 root.appendChild(C);
+
+
+button_for_AI.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/AI.html'
+})
+
+button_for_Data_Science.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/data_science.html'
+})
+
+button_for_ML.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/machine-learning.html'
+})
+
+button_for_DL.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/deep-learning.html'
+})
+
+button_for_Neural_networks.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/neural_networks.html'
+})
+
+button_for_Linear_Algebra.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/linear_algebra.html'
+})
+
+button_for_Probability_and_Statistics.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/probability-and-statistics.html'
+})
+
+button_for_Calculus.addEventListener("click", function() {
+    window.location.href = '../html-files/courses/calculus.html'
+})

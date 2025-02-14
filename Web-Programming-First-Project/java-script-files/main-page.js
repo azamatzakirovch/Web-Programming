@@ -372,8 +372,23 @@ sidebar_button.appendChild(img_of_sidebar_button);
 controller_bar.appendChild(sidebar_button);
 controller_bar.appendChild(sidebar);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const learning_button = document.createElement("div");
 learning_button.className = "learning_button";
+
 const txt_learning_button = document.createElement("div");
 txt_learning_button.textContent = 'Learning';
 txt_learning_button.style.fontSize = "30px";
@@ -501,8 +516,11 @@ sidebar_button.addEventListener('click', function() {
 
 close_sidebar_button.addEventListener('click', function() {
     sidebar.classList.toggle("active");
+});
 
-})
+learning_button.addEventListener('click', function() {
+
+});
 
 function hider_of_first_page(f){
     let show_or_hide = 'none'

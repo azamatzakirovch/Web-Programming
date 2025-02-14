@@ -74,8 +74,9 @@ start_learning.style.fontFamily = "Arial";
 start_learning.style.position = "absolute";
 start_learning.style.left = "250px";
 start_learning.style.top = "40px";
-// start_learning.style.fontWeight = "bold";
 start_learning.style.color = "black";
+
+
 
 
 
