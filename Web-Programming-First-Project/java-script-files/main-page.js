@@ -372,20 +372,6 @@ sidebar_button.appendChild(img_of_sidebar_button);
 controller_bar.appendChild(sidebar_button);
 controller_bar.appendChild(sidebar);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const learning_button = document.createElement("div");
 learning_button.className = "learning_button";
 
@@ -552,7 +538,7 @@ function hider_of_2nd_window(f){
     really_edit_profile_name_and_surname.style.display = show_or_hide;
     helper_to_change_name_and_profile_photo.style.display = show_or_hide;
     save_edited_profile.style.display = show_or_hide;
-    rectangle_of_phone_and_username_changer.style.display = show_or_hide;
+        rectangle_of_phone_and_username_changer.style.display = show_or_hide;
     divided_by_phone_and_username.style.display = show_or_hide;
     helper_to_change_birthday.style.display = show_or_hide;
     edit_birthday_button.style.display = show_or_hide;

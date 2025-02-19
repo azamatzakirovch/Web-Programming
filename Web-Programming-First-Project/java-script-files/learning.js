@@ -215,11 +215,11 @@ button_for_DL.addEventListener("click", function() {
 })
 
 button_for_Neural_networks.addEventListener("click", function() {
-    window.location.href = '../html-files/courses/neural_networks.html'
+    window.location.href = '../html-files/courses/neural-networks.html'
 })
 
 button_for_Linear_Algebra.addEventListener("click", function() {
-    window.location.href = '../html-files/courses/linear_algebra.html'
+    window.location.href = '../html-files/courses/linear-algebra.html'
 })
 
 button_for_Probability_and_Statistics.addEventListener("click", function() {
