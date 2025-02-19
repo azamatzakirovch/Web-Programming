@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="homeworkContainer">
+    <h2>Last Homework Assignment</h2>
+    <p id="homeworkTitle">Math Assignment 1</p>
+    <p>Deadline: <span id="homeworkDeadline">February 25, 2025</span></p>
+    <a id="downloadLink" href="path/to/homework.pdf" download>Download Homework</a>
+    <button id="confirmButton">I Got My Homework</button>
+</div>
+
+<div class="container hidden" id="uploadContainer">
+    <h2>Upload Your Homework</h2>
+    <form id="homeworkForm">
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" name="studentID" required>
+
+        <label for="studentName">Your Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="homeworkFile">Choose Homework File:</label>
+        <input type="file" id="homeworkFile" name="homeworkFile" accept=".pdf, .doc, .docx" required>
+
+        <button type="submit">Upload Homework</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('confirmButton').addEventListener('click', function() {
+        // Hide the homework section and show the upload section
+        document.getElementById('homeworkContainer').classList.add('hidden');
+        document.getElementById('uploadContainer').classList.remove('hidden');
+    });
+
+    document.getElementById('homeworkForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Handle file upload logic here
+        alert('Homework submitted successfully!');
+        // Optionally reset the form or redirect
+    });
+</script>
+
+</body>
+</html>
