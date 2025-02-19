@@ -62,16 +62,13 @@
 
 <script>
     document.getElementById('confirmButton').addEventListener('click', function() {
-        // Hide the homework section and show the upload section
         document.getElementById('homeworkContainer').classList.add('hidden');
         document.getElementById('uploadContainer').classList.remove('hidden');
     });
 
     document.getElementById('homeworkForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        // Handle file upload logic here
-        alert('Homework submitted successfully!');
-        // Optionally reset the form or redirect
+        alert('Homework submitted successfully!');  
     });
 </script>
 
