@@ -103,3 +103,15 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+
+.select_the_region {
+    position: absolute;
+    top: 450px;
+    right: 90px;
+    width: 480px;
+    height: 55px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+

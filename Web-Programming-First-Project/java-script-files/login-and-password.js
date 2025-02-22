@@ -101,3 +101,7 @@ move_forward.addEventListener('click', function() {
 next_button_of_login_password.addEventListener("click", function() {
     window.location.href = 'main_page.html'
 })
+
+create_new_account.addEventListener("click", function() {
+    window.location.href = "../html-files/create-account.html"
+})

@@ -9,7 +9,6 @@ const the_location_of_users_profile_photo = '../photos/azamatzakirovch.jpg'
 const controller_bar = document.createElement('div');
 controller_bar.className = "controller_bar";
 controller_bar.style.cssText = "width: 100%; height: 70px; background-color: #D9D9D9;";
-
 const account_settings = document.createElement('div');
 account_settings.className = "account_settings";
 account_settings.id = "open_popup";
@@ -45,6 +44,8 @@ username_of_user_for_controller_bar.style.color = "#AEAEAE";
 const mini_window_to_see_account = document.createElement("div");
 mini_window_to_see_account.className = "popup";
 mini_window_to_see_account.style.display = "none";
+
+
 
 const close_button_of_mini_window_to_see_account = document.createElement("div");
 close_button_of_mini_window_to_see_account.className = "close-btn";
@@ -538,7 +539,7 @@ function hider_of_2nd_window(f){
     really_edit_profile_name_and_surname.style.display = show_or_hide;
     helper_to_change_name_and_profile_photo.style.display = show_or_hide;
     save_edited_profile.style.display = show_or_hide;
-        rectangle_of_phone_and_username_changer.style.display = show_or_hide;
+    rectangle_of_phone_and_username_changer.style.display = show_or_hide;
     divided_by_phone_and_username.style.display = show_or_hide;
     helper_to_change_birthday.style.display = show_or_hide;
     edit_birthday_button.style.display = show_or_hide;
@@ -566,26 +567,4 @@ function createDivider(x,y, height = "1px") {
     divider.style.backgroundColor = "black";
     document.body.appendChild(divider);
     return divider;
-}
-
-function return_the_number_of_days_of_month_and_determines_the_leap_year(year, month){
-    const months = [
-        { name: "January", days: 31 },
-        { name: "February", days: 28 },
-        { name: "March", days: 31 },
-        { name: "April", days: 30 },
-        { name: "May", days: 31 },
-        { name: "June", days: 30 },
-        { name: "July", days: 31 },
-        { name: "August", days: 31 },
-        { name: "September", days: 30 },
-        { name: "October", days: 31 },
-        { name: "November", days: 30 },
-        { name: "December", days: 31 }
-    ];
-    let flag = false
-    if(((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0))&& month === 'February'){
-        return months[month] + 1
-    }
-    return months[month];
 }
