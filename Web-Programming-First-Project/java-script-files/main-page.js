@@ -349,6 +349,13 @@ edit_button_for_username.textContent = "edit";
 edit_button_for_username.textContent.fontcolor("##0f26e1")
 edit_button_for_username.style.display = "none";
 
+
+
+const course_container = document.createElement("div");
+course_container.className = "course_container";
+
+root.appendChild(course_container);
+
 const sidebar = document.createElement("div");
 sidebar.className = "sidebar";
 
@@ -387,6 +394,10 @@ txt_learning_button.style.top = "50%";
 txt_learning_button.style.transform = "translateY(-50%)";
 txt_learning_button.style.color = "#000000";
 learning_button.appendChild(txt_learning_button);
+
+
+
+
 
 const quiz_button = document.createElement("div");
 quiz_button.className = "quiz_button";
@@ -508,6 +519,41 @@ close_sidebar_button.addEventListener('click', function() {
 learning_button.addEventListener('click', function() {
 
 });
+
+// learning_button.addEventListener('click', function() {
+//
+// });
+
+learning_button.addEventListener('click', function() {
+    course_container.innerHTML = '';
+    sidebar.classList.toggle("active");
+    const iframe = document.createElement('iframe');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.src = '../html-files/learning.html';
+    course_container.appendChild(iframe);
+});
+
+quiz_button.addEventListener('click', function() {
+    course_container.innerHTML = '';
+    sidebar.classList.toggle("active");
+    const iframe = document.createElement('iframe');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.src = '../html-files/quizz.html';
+    course_container.appendChild(iframe);
+});
+
+home_work_button.addEventListener('click', function() {
+    course_container.innerHTML = '';
+    sidebar.classList.toggle("active");
+    const iframe = document.createElement('iframe');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.src = '../html-files/homework_management.html';
+    course_container.appendChild(iframe);
+});
+
 
 function hider_of_first_page(f){
     let show_or_hide = 'none'

@@ -206,6 +206,8 @@ button_for_Data_Science.addEventListener("click", function() {
     window.location.href = '../html-files/courses/data_science.html'
 })
 
+
+
 button_for_ML.addEventListener("click", function() {
     window.location.href = '../html-files/courses/machine-learning.html'
 })
