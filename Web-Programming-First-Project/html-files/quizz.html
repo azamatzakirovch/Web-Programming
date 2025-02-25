@@ -1,41 +1,208 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Vertex Academy</title>-->
+<!--  <link rel="stylesheet" href="../css-files/quizz.css">-->
+<!--  <script defer src="../java-script-files/quizz.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="root"></div>-->
+<!--<div id="daily-quizzes">-->
+<!--  <h2>Daily Quizzes</h2>-->
+<!--  <form id="quiz-form">-->
+<!--    <label for="quiz-title">Quiz Title:</label>-->
+<!--    <input type="text" id="quiz-title" required>-->
+
+<!--    <label for="question">Question:</label>-->
+<!--    <input type="text" id="question" required>-->
+
+<!--    <label for="option1">Option 1:</label>-->
+<!--    <input type="text" id="option1" required>-->
+
+<!--    <label for="option2">Option 2:</label>-->
+<!--    <input type="text" id="option2" required>-->
+
+<!--    <label for="option3">Option 3:</label>-->
+<!--    <input type="text" id="option3" required>-->
+
+<!--    <label for="option4">Option 4:</label>-->
+<!--    <input type="text" id="option4" required>-->
+
+<!--    <label for="correct-answer">Correct Answer:</label>-->
+<!--    <input type="text" id="correct-answer" required>-->
+
+<!--    <button type="submit">Add Quiz</button>-->
+<!--  </form>-->
+<!--  <div id="quiz-list"></div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vertex Academy</title>
-  <link rel="stylesheet" href="../css-files/quizz.css">
-  <script defer src="../java-script-files/quizz.js"></script>
+  <title>Daily Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #283593;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #quizContainer {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      justify-content: space-between;
+    }
+
+    .option {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .option:hover {
+      background-color: #e0e0e0;
+    }
+
+    .option.correct {
+      background-color: green;
+      color: white;
+    }
+
+    .option.incorrect {
+      background-color: red;
+      color: white;
+    }
+
+    #timer {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #283593;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-<div id="root"></div>
-<div id="daily-quizzes">
-  <h2>Daily Quizzes</h2>
-  <form id="quiz-form">
-    <label for="quiz-title">Quiz Title:</label>
-    <input type="text" id="quiz-title" required>
+<header>
+  <h1>Daily Quiz</h1>
+</header>
+<main>
+  <div id="quizContainer">
+    <div id="questionContainer"></div>
+    <div id="optionsContainer"></div>
+    <div id="resultMessage"></div>
+    <div id="timer">Time Left: <span id="timeLeft"></span> seconds</div>
+    <button id="submitButton" class="hidden">Submit Answer</button>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2025 Learning Platform</p>
+</footer>
+<script>
+  const question = {
+    question: "What is the capital of France?",
+    options: ["Berlin", "Madrid", "Paris", "Lisbon"],
+    answer: "Paris"
+  };
 
-    <label for="question">Question:</label>
-    <input type="text" id="question" required>
+  let timeLeft = 30;
+  let timer;
 
-    <label for="option1">Option 1:</label>
-    <input type="text" id="option1" required>
+  function startQuiz() {
+    loadQuestion();
+    startTimer();
+  }
 
-    <label for="option2">Option 2:</label>
-    <input type="text" id="option2" required>
+  function loadQuestion() {
+    const questionContainer = document.getElementById('questionContainer');
+    const optionsContainer = document.getElementById('optionsContainer');
 
-    <label for="option3">Option 3:</label>
-    <input type="text" id="option3" required>
 
-    <label for="option4">Option 4:</label>
-    <input type="text" id="option4" required>
+    questionContainer.innerHTML = `<h3>${question.question}</h3>`;
 
-    <label for="correct-answer">Correct Answer:</label>
-    <input type="text" id="correct-answer" required>
 
-    <button type="submit">Add Quiz</button>
-  </form>
-  <div id="quiz-list"></div>
-</div>
+    question.options.forEach(option => {
+      const button = document.createElement('button');
+      button.textContent = option;
+      button.className = 'option';
+      button.onclick = () => selectOption(button, question.answer);
+      optionsContainer.appendChild(button);
+    });
+  }
+
+  function selectOption(selectedButton, correctAnswer) {
+    clearInterval(timer);
+    const options = document.querySelectorAll('.option');
+
+    options.forEach(option => {
+      option.disabled = true;
+      if (option.textContent === correctAnswer) {
+        option.classList.add('correct');
+      } else if (option === selectedButton) {
+        option.classList.add('incorrect');
+      }
+    });
+
+    document.getElementById('resultMessage').textContent =
+            selectedButton.textContent === correctAnswer ?
+                    "Correct!" :
+                    `Wrong! The correct answer is ${correctAnswer}.`;
+  }
+
+  function startTimer() {
+    document.getElementById('timeLeft').textContent = timeLeft;
+
+    timer = setInterval(() => {
+      timeLeft--;
+      document.getElementById('timeLeft').textContent = timeLeft;
+
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        document.getElementById('resultMessage').textContent = "Time's Up! The correct answer was " + question.answer + ".";
+        document.querySelectorAll('.option').forEach(option => option.disabled = true);
+      }
+    }, 1000);
+  }
+  startQuiz();
+</script>
 </body>
 </html>

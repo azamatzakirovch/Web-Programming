@@ -3,74 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework Management</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="../css-files/homework.css">
+    <title>Get & Upload Homework</title>
 </head>
 <body>
+<div class="container">
+    <h1>Get & Upload Homework</h1>
+    <button id="get-homework" class="button">Download Homework</button>
 
-<div class="container" id="homeworkContainer">
-    <h2>Last Homework Assignment</h2>
-    <p id="homeworkTitle">Math Assignment 1</p>
-    <p>Deadline: <span id="homeworkDeadline">February 25, 2025</span></p>
-    <a id="downloadLink" href="path/to/homework.pdf" download>Download Homework</a>
-    <button id="confirmButton">I Got My Homework</button>
+    <div id="confirmation" class="confirmation" style="display: none;">
+        <p class="confirm-text">Homework downloaded successfully!</p>
+        <button id="upload-homework" class="button">Upload Your Homework</button>
+    </div>
+
+    <div id="upload-section" class="upload-section" style="display: none;">
+        <h2>Upload Your Homework</h2>
+        <input type="text" id="student-id" placeholder="Enter your ID" class="input" />
+        <input type="file" id="homework-file" class="input" />
+        <button id="submit-homework" class="button">Submit Homework</button>
+        <p id="deadline-warning" class="warning" style="display: none;"></p>
+    </div>
+
+    <div id="course-info" class="course-info">
+        <h3>Course Information</h3>
+        <p>Course: <strong>Math Homework 101</strong></p>
+        <p>Homework Number: <strong>1</strong></p>
+
+    </div>
 </div>
 
-<div class="container hidden" id="uploadContainer">
-    <h2>Upload Your Homework</h2>
-    <form id="homeworkForm">
-        <label for="studentID">Student ID:</label>
-        <input type="text" id="studentID" name="studentID" required>
-
-        <label for="studentName">Your Name:</label>
-        <input type="text" id="studentName" name="studentName" required>
-
-        <label for="homeworkFile">Choose Homework File:</label>
-        <input type="file" id="homeworkFile" name="homeworkFile" accept=".pdf, .doc, .docx" required>
-
-        <button type="submit">Upload Homework</button>
-    </form>
-</div>
-
-<script>
-    document.getElementById('confirmButton').addEventListener('click', function() {
-        document.getElementById('homeworkContainer').classList.add('hidden');
-        document.getElementById('uploadContainer').classList.remove('hidden');
-    });
-
-    document.getElementById('homeworkForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Homework submitted successfully!');  
-    });
-</script>
-
+<script src="../java-script-files/homework.js"></script>
 </body>
 </html>

@@ -313,7 +313,7 @@ body {
     height: 100vh;
     background-color: #ffffff;
     border-top-right-radius: 30px;
-    color: white;
+    color: #000000;
     position: fixed;
     left: -600px;
     top: 0;
