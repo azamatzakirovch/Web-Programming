@@ -1,23 +1,17 @@
 Web Programming First Project
 
-
-
-
 📌 Project Overview
 This project is a structured web application built using HTML, CSS, and JavaScript. It contains multiple sections, including course pages, quizzes, and a login system.
 
-
-
-
 🚀 Features
-User Authentication(Login & Password System)
-Course Pages (Learning Materials, Homework Management)
-Quiz System
-Responsive Design
 
+✅ User Authentication (Login & Password System)
+✅ Course Pages (Learning Materials, Homework Management)
+✅ Quiz System
+✅ Responsive Design
 
+📂 Folder Structure
 
- 📂 Folder Structure
 Web-Programming-First-Project/
 │── css-files/
 │   ├── courses/
@@ -30,7 +24,7 @@ Web-Programming-First-Project/
 │   │   ├── quizz.css
 │
 │── design-of-website-with-figma-jam-file/
-│   ├── academy_vertex.fig (Figma Design)
+│   ├── academy_vertex.fig  # Figma Design
 │   ├── information.txt
 │
 │── html-files/
@@ -53,17 +47,18 @@ Web-Programming-First-Project/
 │   │   ├── main-page.js
 │   │   ├── quizz.js
 │
-│── photos/ (Images for the project)
-
+│── photos/  # Images for the project
 🛠 Technologies Used
+
 HTML5
 CSS3 (Flexbox, Grid, Responsive Design)
 JavaScript (ES6+)
 Figma (for UI/UX Design)
-
 👨‍💻 Contributors
+
 Azamat
 Laylo
-
 📄 License
+
 This project is licensed under the MIT License.
+
