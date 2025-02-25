@@ -1,4 +1,4 @@
-Web Programming First Project
+Web Programming First Project \n
 
 📌 Project Overview
 This project is a structured web application built using HTML, CSS, and JavaScript. It contains multiple sections, including course pages, quizzes, and a login system.
