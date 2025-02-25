@@ -354,6 +354,13 @@ edit_button_for_username.style.display = "none";
 const course_container = document.createElement("div");
 course_container.className = "course_container";
 
+
+const iframe = document.createElement('iframe');
+iframe.style.width = '100%';
+iframe.style.height = '100%';
+iframe.src = '../html-files/learning.html';
+course_container.appendChild(iframe);
+
 root.appendChild(course_container);
 
 const sidebar = document.createElement("div");
@@ -445,7 +452,7 @@ about_us.appendChild(txt_about_us);
 sidebar.appendChild(close_sidebar_button);
 sidebar.appendChild(quiz_button);
 sidebar.appendChild(home_work_button);
-sidebar.appendChild(about_us);
+// sidebar.appendChild(about_us);
 sidebar.appendChild(learning_button);
 sidebar.appendChild(close_sidebar_button);
 sidebar.appendChild(learning_button);

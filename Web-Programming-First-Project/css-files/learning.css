@@ -176,3 +176,18 @@ body {
 .button_for_Calculus {
     left: 1450px;
 }
+
+.say_welcome_to_us {
+    color: black;
+    background-color: darkblue;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin: 0;
+}
+
