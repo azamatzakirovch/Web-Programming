@@ -428,24 +428,24 @@ txt_home_work_button.style.color = "#000000";
 home_work_button.appendChild(txt_home_work_button);
 
 
-const grader_button = document.createElement("div");
-grader_button.className = "grader_button";
-const txt_grader_button = document.createElement("div");
-txt_grader_button.textContent = 'Grades';
-txt_grader_button.style.fontSize = "30px";
-txt_grader_button.style.lineHeight = "14px";
-txt_grader_button.style.fontFamily = "Arial";
-txt_grader_button.style.position = "absolute";
-txt_grader_button.style.left = "80px";
-txt_grader_button.style.top = "50%";
-txt_grader_button.style.transform = "translateY(-50%)";
-txt_grader_button.style.color = "#000000";
-grader_button.appendChild(txt_grader_button);
+const about_us = document.createElement("div");
+about_us.className = "grader_button";
+const txt_about_us = document.createElement("div");
+txt_about_us.textContent = 'About Us';
+txt_about_us.style.fontSize = "30px";
+txt_about_us.style.lineHeight = "14px";
+txt_about_us.style.fontFamily = "Arial";
+txt_about_us.style.position = "absolute";
+txt_about_us.style.left = "80px";
+txt_about_us.style.top = "50%";
+txt_about_us.style.transform = "translateY(-50%)";
+txt_about_us.style.color = "#000000";
+about_us.appendChild(txt_about_us);
 
 sidebar.appendChild(close_sidebar_button);
 sidebar.appendChild(quiz_button);
 sidebar.appendChild(home_work_button);
-sidebar.appendChild(grader_button);
+sidebar.appendChild(about_us);
 sidebar.appendChild(learning_button);
 sidebar.appendChild(close_sidebar_button);
 sidebar.appendChild(learning_button);
@@ -520,10 +520,6 @@ learning_button.addEventListener('click', function() {
 
 });
 
-// learning_button.addEventListener('click', function() {
-//
-// });
-
 learning_button.addEventListener('click', function() {
     course_container.innerHTML = '';
     sidebar.classList.toggle("active");
@@ -551,6 +547,16 @@ home_work_button.addEventListener('click', function() {
     iframe.style.width = '100%';
     iframe.style.height = '100%';
     iframe.src = '../html-files/homework_management.html';
+    course_container.appendChild(iframe);
+});
+
+about_us.addEventListener('click', function() {
+    course_container.innerHTML = '';
+    sidebar.classList.toggle("active");
+    const iframe = document.createElement('iframe');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.src = '../html-files/about-us.html';
     course_container.appendChild(iframe);
 });
 
