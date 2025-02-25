@@ -1,13 +1,21 @@
-Web Programming First Project \n
+Web Programming First Project
+
+
+
 
 📌 Project Overview
 This project is a structured web application built using HTML, CSS, and JavaScript. It contains multiple sections, including course pages, quizzes, and a login system.
+
+
+
 
 🚀 Features
 User Authentication(Login & Password System)
 Course Pages (Learning Materials, Homework Management)
 Quiz System
 Responsive Design
+
+
 
  📂 Folder Structure
 Web-Programming-First-Project/
